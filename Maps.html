@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maps Valorant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+        }
+
+        .navbar-change {
+            background-color: #5a0f0f;
+            height: 50px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .navbar-change .nav-link,
+        .navbar-change .navbar-brand {
+            color: white;
+        }
+
+        .navbar-change .nav-link:hover {
+            color: #ffcc00;
+            font-size: 16px;
+
+        }
+
+        .search-box {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+        }
+
+        .search-box::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .navbar-nav {
+            flex-grow: 1;
+            justify-content: left;
+            margin-left: 10px;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 1;
+        }
+
+        .navbar-brand {
+            margin-left: 10px;
+        }
+
+        .dropdown-menu {
+            background-color: #5a0f0f;
+        }
+
+        .dropdown-menu .dropdown-item {
+            color: white;
+        }
+
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #771212;
+            color: #ffcc00;
+        }
+
+        .map-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .map-card {
+            position: relative;
+            width: 300px;
+            margin: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .map-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .map-name {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .footer-text {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-change">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/Valorant_logo_-_pink_color_version.svg.png" alt="Home" width="60" height="40">
+                </a>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="trendingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-fire"></i> Trending
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Pacific.html">VCT 2025:Pacific Stage 1</a></li>
+                            <li><a class="dropdown-item" href="Americas.html">VCT 2025: Americas Stage 1</a></li>
+                            <li><a class="dropdown-item" href="China.html">VCT 2025: China Stage 1</a></li>
+                            <li><a class="dropdown-item" href="EMEA.html">VCT 2025: EMEA Stage 1</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Ranking.html">
+                            <i class="fa-solid fa-trophy"></i> Ranking
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="contributeDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-puzzle-piece"></i> Contribute
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">670710203 ธนกฤต วรรณศรี</a></li>
+                            <li><a class="dropdown-item" href="#">670710339 สรินทร์ชัย มีศิลป์</a></li>
+                            <li><a class="dropdown-item" href="#">670710726 พศวีร์ สุทธิวานิช</a></li>
+                            <li><a class="dropdown-item" href="#">670710981 ภัทรพล ภวาภิรมย์</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="search-container">
+                    <form class="d-flex">
+                        <input class="form-control me-2 search-box" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                    <ul class="navbar-nav ms-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-user-plus"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-right-to-bracket"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </nav>
+        <div class="container mt-4">
+            <h1 class="text-center">All Maps</h1>
+            <div class="map-container">
+                <div class="map-card">
+                    <img src="img/533px-Abyss_Map.png" alt="Abyss">
+                    <div class="map-name">Abyss</div>
+                </div>
+                <div class="map-card">
+                    <img src="img/600px-Ascent_Map.png" alt="Ascent">
+                    <div class="map-name">Ascent</div>
+                </div>
+                <div class="map-card">
+                    <img src="img/600px-Bind_Map.png" alt="Bind">
+                    <div class="map-name">Bind</div>
+                </div>
+                <div class="map-card">
+                    <img src="img/534px-Breeze_Map.png" alt="Breeze">
+                    <div class="map-name">Breeze</div>
+                </div>
+                <div class="map-card">
+                    <img src="img/534px-Fracture_Map.png" alt="Fracture">
+                    <div class="map-name">Fracture</div>
+                </div>
+                <div class="map-card">
+                    <img src="img/600px-Haven_Map.png" alt="Haven">
+                    <div class="map-name">Haven</div>
+                </div>
+                <div class="map-card">
+                    <img src="img/534px-Icebox_Map.png" alt="Icebox">
+                    <div class="map-name">Icebox</div>
+                </div>
+                <div class="map-card">
+                    <img src="img/533px-Pearl_Map.png" alt="Pearl">
+                    <div class="map-name">Pearl</div>
+                </div>
+                <div class="map-card">
+                    <img src="img/533px-Lotus_Map_VALORANT.png" alt="Lotus">
+                    <div class="map-name">Lotus</div>
+                </div>
+                <div class="map-card">
+                    <img src="img/600px-Split_Map (1).png" alt="Split">
+                    <div class="map-name">Split</div>
+                </div>
+                <div class="map-card">
+                    <img src="img/534px-Sunset_Map.png" alt="Sunset">
+                    <div class="map-name">Sunset</div>
+                </div>
+            </div>
+        </div>
+        <footer class="container-fluid bg-dark text-light py-2 text-center">
+            <div class="container">
+                <p style="font-size: 20px;">&copy; 670710203 ธนกฤต วรรณศรี</p>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+
+</html>

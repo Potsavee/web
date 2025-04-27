@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ranking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+        }
+
+        .navbar-change {
+            background-color: #5a0f0f;
+            height: 50px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .navbar-change .nav-link,
+        .navbar-change .navbar-brand {
+            color: white;
+        }
+
+        .navbar-change .nav-link:hover {
+            color: #ffcc00;
+            font-size: 16px;
+       
+        }
+
+        .search-box {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+        }
+
+        .search-box::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .navbar-nav {
+            flex-grow: 1;
+            justify-content: left;
+            margin-left: 10px;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 1;
+        }
+
+        .navbar-brand {
+            margin-left: 10px;
+        }
+
+        .dropdown-menu {
+            background-color: #5a0f0f;
+        }
+
+        .dropdown-menu .dropdown-item {
+            color: white;
+        }
+
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #771212;
+            color: #ffcc00;
+        }
+
+        
+
+
+        .dropdown-item {
+            color: white;
+            font-size: 14px;
+        }
+
+        .sidebar {
+            background-color: #800000;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .sidebar-header {
+            background-color: #660000;
+            padding: 15px;
+            border-radius: 10px 10px 0 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .sidebar h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .sidebar-section {
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 0 10px 10px;
+            background-color: #800000;
+        }
+
+        .sidebar a {
+            color: #ddd;
+            text-decoration: none;
+            display: block;
+            margin: 8px 0;
+            font-size: 1.1rem;
+            color: #f0f0f0;
+        }
+
+        .sidebar a:hover {
+            color: #ffcc00;
+            text-decoration: underline;
+        }
+
+        .sidebar p {
+            font-size: 1.1rem;
+            color: #f0f0f0;
+            margin-bottom: 5px;
+        }
+
+        .sidebar h5 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: white;
+            border-bottom: 2px solid #555;
+            padding-bottom: 5px;
+        }
+
+        .ranking-container {
+            max-width: 900px;
+            margin: auto;
+            background: #3b3b3b;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .ranking-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .region-title {
+            color: #ff4c4c;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .team-list {
+            background: #444;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .team-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #555;
+        }
+
+        .team-name {
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-change">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/Valorant_logo_-_pink_color_version.svg.png" alt="Home" width="60" height="40">
+                </a>
+                
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="trendingDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-fire"></i> Trending
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Pacific.html">VCT 2025:Pacific Stage 1</a></li>
+                                <li><a class="dropdown-item" href="Americas.html">VCT 2025: Americas Stage 1</a></li>
+                        <li><a class="dropdown-item" href="China.html">VCT 2025: China Stage 1</a></li>
+                                <li><a class="dropdown-item" href="EMEA.html">VCT 2025: EMEA Stage 1</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Ranking.html">
+                                <i class="fa-solid fa-trophy"></i> Ranking
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="contributeDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-puzzle-piece"></i> Contribute
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">670710203 ธนกฤต วรรณศรี</a></li>
+                                <li><a class="dropdown-item" href="#">670710339 สรินทร์ชัย มีศิลป์</a></li>
+                                <li><a class="dropdown-item" href="#">670710726 พศวีร์ สุทธิวานิช</a></li>
+                                <li><a class="dropdown-item" href="#">670710981 ภัทรพล ภวาภิรมย์</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="search-container">
+                        <form class="d-flex">
+                            <input class="form-control me-2 search-box" type="search" placeholder="Search"
+                                aria-label="Search">
+                            <button class="btn btn-outline-light" type="submit"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                        <ul class="navbar-nav ms-2">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-solid fa-user-plus"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-solid fa-right-to-bracket"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container mt-4 ranking-container">
+            <h1 class="text-center ranking-header">Valorant Team Rankings: World</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="region-title">EUROPE</h3>
+                    <div class="team-list">
+                        <div class="team-item"><span>1. Team Heretics</span> <span>2000</span></div>
+                        <div class="team-item"><span>2. Team Vitality</span> <span>1953</span></div>
+                        <div class="team-item"><span>3. BBL PCIFIC</span> <span>1935</span></div>
+                        <div class="team-item"><span>4. FNATIC</span> <span>1883</span></div>
+                        <div class="team-item"><span>5. MOUZ</span> <span>1879</span></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="region-title">NORTH AMERICA</h3>
+                    <div class="team-list">
+                        <div class="team-item"><span>1. G2 Esports</span> <span>2000</span></div>
+                        <div class="team-item"><span>2. Cloud9</span> <span>1800</span></div>
+                        <div class="team-item"><span>3. NRG Esports</span> <span>1795</span></div>
+                        <div class="team-item"><span>4. Sentinels</span> <span>1751</span></div>
+                        <div class="team-item"><span>5. ENVY</span> <span>1742</span></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="region-title">Brazil</h3>
+                    <div class="team-list">
+                        <div class="team-item"><span>1. MIBR</span> <span>2000</span></div>
+                        <div class="team-item"><span>2. RED Canids</span> <span>1997</span></div>
+                        <div class="team-item"><span>3. Corinthians Esports</span> <span>1969</span></div>
+                        <div class="team-item"><span>4. 2Game Esports</span> <span>1960</span></div>
+                        <div class="team-item"><span>5. LOUD</span> <span>1919</span></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="region-title">Asia-Pacific</h3>
+                    <div class="team-list">
+                        <div class="team-item"><span>1. FULL SENSE</span> <span>2000</span></div>
+                        <div class="team-item"><span>2. BOOM Esport</span> <span>1930</span></div>
+                        <div class="team-item"><span>3. Alter Ego</span> <span>1860</span></div>
+                        <div class="team-item"><span>4. Paper Rex</span> <span>1805</span></div>
+                        <div class="team-item"><span>5. Revenant XSpark</span> <span>1802</span></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="region-title">China</h3>
+                    <div class="team-list">
+                        <div class="team-item"><span>1. EDward Gaming</span> <span>2000</span></div>
+                        <div class="team-item"><span>2. Nova Esports</span> <span>1846</span></div>
+                        <div class="team-item"><span>3. Bilibili Gaming</span> <span>1846</span></div>
+                        <div class="team-item"><span>4. Trace Esport</span> <span>1842</span></div>
+                        <div class="team-item"><span>5. Xi Lai Gaming</span> <span>1841</span></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="region-title">Korea</h3>
+                    <div class="team-list">
+                        <div class="team-item"><span>1. T1</span> <span>2000</span></div>
+                        <div class="team-item"><span>2. Gen.G</span> <span>1881</span></div>
+                        <div class="team-item"><span>3. DRX</span> <span>1853</span></div>
+                        <div class="team-item"><span>4. Nongshim RedForce</span> <span>1845</span></div>
+                        <div class="team-item"><span>5. FearX</span> <span>1709</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="container-fluid bg-dark text-light py-2 text-center">
+            <div class="container">
+                <p style="font-size: 20px;">&copy; 670710726 พศวีร์ สุทธิวานิช</p>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+
+        </script>
+    </body>
+
+</html>

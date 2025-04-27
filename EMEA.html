@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VCT 2025: EMEA Stage 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+        }
+
+        .navbar-change {
+            background-color: #5a0f0f;
+            height: 50px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .navbar-change .nav-link,
+        .navbar-change .navbar-brand {
+            color: white;
+        }
+
+        .navbar-change .nav-link:hover {
+            color: #ffcc00;
+            font-size: 16px;
+
+        }
+
+        .search-box {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+        }
+
+        .search-box::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .navbar-nav {
+            flex-grow: 1;
+            justify-content: left;
+            margin-left: 10px;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 1;
+        }
+
+        .navbar-brand {
+            margin-left: 10px;
+        }
+
+        .dropdown-menu {
+            background-color: #5a0f0f;
+        }
+
+        .dropdown-menu .dropdown-item {
+            color: white;
+        }
+
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #771212;
+            color: #ffcc00;
+        }
+
+        .dropdown-item {
+            color: white;
+            font-size: 14px;
+        }
+
+        .sidebar {
+            background-color: #800000;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .sidebar-header {
+            background-color: #660000;
+            padding: 15px;
+            border-radius: 10px 10px 0 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .sidebar h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .sidebar-section {
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 0 10px 10px;
+            background-color: #800000;
+        }
+
+        .sidebar a {
+            color: #ddd;
+            text-decoration: none;
+            display: block;
+            margin: 8px 0;
+            font-size: 1.1rem;
+            color: #f0f0f0;
+        }
+
+        .sidebar a:hover {
+            color: #ffcc00;
+            text-decoration: underline;
+        }
+
+        .sidebar p {
+            font-size: 1.1rem;
+            color: #f0f0f0;
+            margin-bottom: 5px;
+        }
+
+        .sidebar h5 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: white;
+            border-bottom: 2px solid #555;
+            padding-bottom: 5px;
+        }
+
+        .content-section {
+            background-color: #121212;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 2px solid #272727;
+        }
+
+        .custom-header {
+            background-color: #5a0f0f;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .table {
+            color: #ffffff;
+        }
+
+        .table-dark {
+            --bs-table-bg: #282828;
+            --bs-table-color: #ffffff;
+            --bs-table-border-color: #555;
+        }
+
+        .text-yellow {
+            color: #ffcc00;
+        }
+
+        .col-lg-5.ms-left {
+            margin-left: 600px;
+        }
+
+        .broadcasters {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .broadcasters ul {
+            margin-right: 20px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+
+        .team-cell {
+            background-color: #282828;
+            border: 1px solid #555;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .team-name {
+            font-size: 1em;
+            color: #ddd;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .team-logo {
+            max-width: 70%;
+            max-height: 70%;
+            margin: 5px 0;
+            object-fit: contain;
+        }
+
+        .team-info-container {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .team-type {
+            font-size: 0.8em;
+            color: #ffffff;
+            padding: 5px;
+        }
+
+        .separator-line {
+            height: 1px;
+            background-color: #555;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        .team-notes {
+            font-size: 0.8em;
+            color: #888;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 120px;
+            width: 100%;
+        }
+
+        .footer-text {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-change">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/Valorant_logo_-_pink_color_version.svg.png" alt="Home" width="60" height="40">
+                </a>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="trendingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-fire"></i> Trending
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Pacific.html">VCT 2025:Pacific Stage 1</a></li>
+                            <li><a class="dropdown-item" href="Americas.html">VCT 2025: Americas Stage 1</a></li>
+                        <li><a class="dropdown-item" href="China.html">VCT 2025: China Stage 1</a></li>
+                            <li><a class="dropdown-item" href="EMEA.html">VCT 2025: EMEA Stage 1</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Ranking.html">
+                            <i class="fa-solid fa-trophy"></i> Ranking
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="contributeDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-puzzle-piece"></i> Contribute
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">670710203 ธนกฤต วรรณศรี</a></li>
+                            <li><a class="dropdown-item" href="#">670710339 สรินทร์ชัย มีศิลป์</a></li>
+                            <li><a class="dropdown-item" href="#">670710726 พศวีร์ สุทธิวานิช</a></li>
+                            <li><a class="dropdown-item" href="#">670710981 ภัทรพล ภวาภิรมย์</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="search-container">
+                    <form class="d-flex">
+                        <input class="form-control me-2 search-box" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                    <ul class="navbar-nav ms-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-user-plus"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-right-to-bracket"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-lg-5 ms-left">
+                <div class="content-section">
+                    <h2>About</h2>
+                    <h3>Broadcast Talent</h3>
+                    <div class="broadcasters">
+                        <ul>
+                            <li>English Hosts:</li>
+                            <ul>
+                                <li><img src="img/36px-Gb_hd.png" height="15px"> Yinsu (Yinsu Collins)</li>
+                            </ul>
+                        </ul>
+                        <ul>
+                            <li>Commentators & Analysts:</li>
+                            <ul>
+                                <li><img src="img/36px-Gb-sct_hd.png" height="15px"> billieidk (Billie Purdie)</li>
+                                <li><img src="img/36px-Gb_hd.png" height="15px"> Hypoc (Michael Robins)</li>
+                                <li><img src="img/36px-Es_hd.png" height="15px"> kaquka (Beatriz Alonso)</li>
+                                <li><img src="img/36px-Gb_hd.png" height="15px"> mini (Jacob Harris)</li>
+                                <li><img src="img/36px-Ie_hd.png" height="15px"> MitchMan (Mitch McBride)</li>
+                                <li><img src="img/36px-Gb_hd.png" height="15px"> Pansy (Lauren Scott)</li>
+                                <li><img src="img/36px-Gb_hd.png" height="15px"> Tombizz (Tom Bissmire)</li>
+                            </ul>
+                        </ul>
+                    </div>
+
+                    </ul>
+                    <ul>
+                        <li>Observers:</li>
+                        <ul>
+                            <li><img src="img/36px-Ie_hd.png" height="15px"> Jack Igoe</li>
+                            <li><img src="img/36px-Gb_hd.png" height="15px"> xilv (Luke Davis)</li>
+                        </ul>
+                    </ul>
+
+                </div>
+                <div class="content-section">
+                    <h2>Format</h2>
+                    <h4>Group Stage: March 26th - April 25th, 2025</h4>
+                    <ul>
+                        <li>Two Single-Round Robin Groups</li>
+                        <li>Each Group has 6 teams</li>
+                        <li>All matches are Bo3</li>
+                        <li>Top 4 teams higling from each group advance to Playoffs</li>
+                        <ul>
+                            <li>Winners have a bye into the Upper Bracket Semifinals</li>
+                            <li>2nd & 3rd placed teams advance to Upper Bracket Round 1</li>
+                            <li>4th placed teams start from Lower Bracket Round 1</li>
+                        </ul>
+                    </ul>
+                    <h4>Playoffs: April 26th - May 11th, 2025</h4>
+                    <ul>
+                        <li>Double-Elimination bracket</li>
+                        <li>All matches (excl. Lower Bracket Final & Grand Final) are Bo3</li>
+                        <li>Lower Bracket Final & Grand Final are Bo5</li>
+                        <li>Top 3 teams qualify for Masters Toronto</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 ms-auto text-end">
+                <div class="content-section text-center">
+                    <h3 class="custom-header">VCT 2025: EMEA Stage 1</h3>
+                    <img src="img/VCT_EMEA_League_Stage_1_full_darkmode.png" width="200px" height="200px"
+                        alt="VCT Pacific Stage 1" class="img-fluid">
+                    <h6 class="custom-header">League Information</h6>
+                    <p><strong>Organizer:</strong> Riot Games</p>
+                    <p><strong>Sponsor(s):</strong> INZONE, Red Bull, paysafecard</p>
+                    <p><strong>Patch:</strong> 10.05</p>
+                    <p><strong>Type:</strong> Offline</p>
+                    <p><strong>Location:</strong> Berlin</p>
+                    <p><strong>Venue:</strong> Riot Games Arena</p>
+                    <p><strong>Start Date:</strong> March 26, 2025</p>
+                    <p><strong>End Date:</strong> May 18, 2025</p>
+                    <p><strong>Teams:</strong> 12</p>
+                    <p><strong>Liquipedia Tier:</strong> S-Tier</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="team-grid">
+            <div class="team-cell">
+                <span class="team-name">Team Vitality</span>
+                <div class="logo-container">
+                    <img src="img/600px-Team_Vitality_2023_darkmode.png" alt="Team Vitality" class="team-logo">
+                </div>
+                <div class="team-info-container">
+                    <div class="separator-line"></div>
+                    <span class="team-type">Partner Team</span>
+                </div>
+            </div>
+            <div class="team-cell">
+                <span class="team-name">Team Liquid</span>
+                <div class="logo-container">
+                    <img src="img/600px-Team_Liquid_2024_full_darkmode.png" alt="Team Liquid" class="team-logo">
+                </div>
+                <div class="team-info-container">
+                    <div class="separator-line"></div>
+                    <span class="team-type">Partner Team</span>
+                </div>
+            </div>
+            <div class="team-cell">
+                <span class="team-name">Team Heretics</span>
+                <div class="logo-container">
+                    <img src="img/600px-Team_Heretics_2022_full_darkmode.png" alt="Team Heretics" class="team-logo">
+                </div>
+                <div class="team-info-container">
+                    <div class="separator-line"></div>
+                    <span class="team-type">Partner Team</span>
+                </div>
+            </div>
+            <div class="team-cell">
+                <span class="team-name">FUT Esports</span>
+                <div class="logo-container">
+                    <img src="img/600px-Futbolist_2021_full_darkmode.png" alt="FUT Esports" class="team-logo">
+                </div>
+                <div class="team-info-container">
+                    <div class="separator-line"></div>
+                    <span class="team-type">Partner Team</span>
+                </div>
+            </div>
+            <div class="team-cell">
+                <span class="team-name">Fnatic</span>
+                <div class="logo-container">
+                    <img src="img/600px-Fnatic_2020_allmode.png" alt="Fnatic" class="team-logo">
+                </div>
+                <div class="team-info-container">
+                    <div class="separator-line"></div>
+                    <span class="team-type">Partner Team</span>
+                </div>
+            </div>
+            <div class="team-cell">
+                <span class="team-name">BBL Esports</span>
+                <div class="logo-container">
+                    <img src="img/600px-BBL_Esports_2022_full_darkmode.png" alt="BBL Esports" class="team-logo">
+                </div>
+                <div class="team-info-container">
+                    <div class="separator-line"></div>
+                    <span class="team-type">Partner Team</span>
+                </div>
+            </div>
+            <div class="team-cell">
+                <span class="team-name">Gentle Mates</span>
+                <div class="logo-container">
+                    <img src="img/600px-Gentle_Mates_darkmode_2024.png" alt="Gentle Mates" class="team-logo">
+                </div>
+                <div class="team-info-container">
+                    <div class="separator-line"></div>
+                    <span class="team-type">Ascension 2024</span>
+                </div>
+            </div>
+            <div class="team-cell">
+                <span class="team-name">GIANTX</span>
+                <div class="logo-container">
+                    <img src="img/600px-GIANTX_full_darkmode.png" alt="GIANTX" class="team-logo">
+                </div>
+                <div class="team-info-container">
+                    <div class="separator-line"></div>
+                    <span class="team-type">Partner Team</span>
+                </div>
+            </div>
+            <div class="team-cell">
+                <span class="team-name">KOI</span>
+                <div class="logo-container">
+                    <img src="img/600px-KOI_2024_allmode.png" alt="KOI" class="team-logo">
+                </div>
+                <div class="team-info-container">
+                    <div class="separator-line"></div>
+                    <span class="team-type">Partner Team</span>
+                </div>
+            </div>
+            <div class="team-cell">
+                <span class="team-name">Natus Vincere</span>
+                <div class="logo-container">
+                    <img src="img/600px-Natus_Vincere_2021_allmode.png" alt="Natus Vincere" class="team-logo">
+                </div>
+                <div class="team-info-container">
+                    <div class="separator-line"></div>
+                    <span class="team-type">Partner Team</span>
+                </div>
+            </div>
+            <div class="team-cell">
+                <span class="team-name">Karmine Corp</span>
+                <div class="logo-container">
+                    <img src="img/600px-Karmine_Corp_full_darkmode.png" alt="Karmine Corp" class="team-logo">
+                </div>
+                <div class="team-info-container">
+                    <div class="separator-line"></div>
+                    <span class="team-type">Partner Team</span>
+                </div>
+            </div>
+            <div class="team-cell">
+                <span class="team-name">Apek<span>
+                        <div class="logo-container">
+                            <img src="img/600px-Apeks_2021_full_darkmode.png" alt="Apeks" class="team-logo">
+                        </div>
+                        <div class="team-info-container">
+                            <div class="separator-line"></div>
+                            <span class="team-type">Ascension 2024</span>
+                        </div>
+                    </span>
+            </div>
+        </div>
+        <footer class="container-fluid bg-dark text-light py-2 text-center">
+            <div class="container">
+                <p style="font-size: 20px;">&copy; 670710981 ภัทรพล ภวาภิรมย์</p>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>

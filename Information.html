@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALORANT Champions Tour 2025</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+        }
+
+        .navbar-change {
+            background-color: #5a0f0f;
+            height: 50px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .navbar-change .nav-link,
+        .navbar-change .navbar-brand {
+            color: white;
+        }
+
+        .navbar-change .nav-link:hover {
+            color: #ffcc00;
+            font-size: 16px;
+
+        }
+
+        .search-box {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+        }
+
+        .search-box::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .navbar-nav {
+            flex-grow: 1;
+            justify-content: left;
+            margin-left: 10px;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 1;
+        }
+
+        .navbar-brand {
+            margin-left: 10px;
+        }
+
+        .dropdown-menu {
+            background-color: #5a0f0f;
+        }
+
+        .dropdown-menu .dropdown-item {
+            color: white;
+        }
+
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #771212;
+            color: #ffcc00;
+        }
+
+        .dropdown-item {
+            color: white;
+            font-size: 14px;
+        }
+
+        .sidebar {
+            background-color: #800000;
+            padding: 15px;
+        }
+
+        .sidebar-header {
+            background-color: #660000;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .sidebar h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .sidebar-section {
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #800000;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            display: block;
+            margin: 8px 0;
+            font-size: 1.1rem;
+            color: #f0f0f0;
+        }
+
+        .sidebar a:hover {
+            color: #ffcc00;
+            text-decoration: underline;
+        }
+
+        .sidebar p {
+            font-size: 1.1rem;
+            color: #f0f0f0;
+            margin-bottom: 5px;
+        }
+
+        .sidebar h5 {  
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: rgb(255, 255, 255);
+            border-bottom: 2px solid #555;
+            padding-bottom: 5px;
+        }
+
+        .fab {
+            margin-right: 8px;
+        }
+
+        .series-info-container {
+            background-color: #990000;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            color: white;
+            font-size: 1.1rem;
+            border-radius: 5px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .partner-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .partner-list li {
+            margin-bottom: 10px;
+        }
+
+        .ImgFlag {
+            height: 16px;
+            margin-bottom: 4px;
+        }
+
+        .table-container {
+            max-width: 900px;
+            margin-left: 0;
+            margin-right: 0;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            width: 100%;
+        }
+
+        .table thead th {
+            background-color: #333;
+            text-align: center;
+        }
+
+        .table tbody td {
+            text-align: center;
+        }
+
+        .bg-LogoVCT {
+            padding: 5px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .footer-text {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-change">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/Valorant_logo_-_pink_color_version.svg.png" alt="Home" width="60" height="40">
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="trendingDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-fire"></i> Trending
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Pacific.html">VCT 2025: Pacific Stage 1</a></li>
+                        <li><a class="dropdown-item" href="Americas.html">VCT 2025: Americas Stage 1</a></li>
+                        <li><a class="dropdown-item" href="China.html">VCT China: Stage 1</a></li>
+                        <li><a class="dropdown-item" href="EMEA.html">VCT 2025: EMEA Stage 1</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Ranking.html">
+                        <i class="fa-solid fa-trophy"></i> Ranking
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="contributeDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-puzzle-piece"></i> Contribute
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">670710203 ธนกฤต วรรณศรี</a></li>
+                        <li><a class="dropdown-item" href="#">670710339 สรินทร์ชัย มีศิลป์</a></li>
+                        <li><a class="dropdown-item" href="#">670710726 พศวีร์ สุทธิวานิช</a></li>
+                        <li><a class="dropdown-item" href="#">670710981 ภัทรพล ภวาภิรมย์</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="search-container">
+                <form class="d-flex">
+                    <input class="form-control me-2 search-box" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <ul class="navbar-nav ms-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-user-plus"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-right-to-bracket"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 sidebar d-flex flex-column">
+                <div class="sidebar-header">
+                    <h3 class="text-center">VALORANT Champions Tour 2025</h3>
+                    <img src="img/800px-VALORANT_Champions_Tour_2025_allmode.png" class="bg-LogoVCT"
+                        alt="VCT 2025 Logo">
+                </div>
+                <section class="mt-4 sidebar-section">
+                    <div class="series-info-container">
+                        Series Information
+                    </div>
+                    <p><strong>Organizer:</strong> Riot Games</p>
+                    <p><strong>Sponsor(s):</strong> Red Bull, Secretlab, Verizon, HyperX, Prime Gaming</p>
+                    <p><strong>Location:</strong> 🌍 Global</p>
+                </section>
+
+                <section class="mt-auto sidebar-section">
+                    <h5>Links</h5>
+                    <a href="https://www.facebook.com/ValorantEsports"><i class="fab fa-facebook"></i>
+                        Facebook</a>
+                    <a href="https://x.com/valorantesports"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="https://www.instagram.com/valorantesports"><i class="fab fa-instagram"></i>
+                        Instagram</a>
+                    <a href="https://www.youtube.com/ValorantEsports"><i class="fab fa-youtube"></i> YouTube</a>
+                </section>
+            </div>
+
+            <div class="col-md-9 content">
+                <h2>VALORANT Champions Tour 2025</h2>
+                <p>is the fifth official tournament circuit by Riot Games. The circuit was announced on August
+                    20th,
+                    2024 with a YouTube video. More details on Championship Points and international tournament
+                    formats
+                    were shared on November 26th, 2024</p>
+                <h3>Format</h3>
+                <h4>Pro System</h4>
+                <ul>
+                    <li>Four international leagues, each in a different region, with 12 teams each.</li>
+                    <li>10 partner teams and 2 teams from Ascension (one from 2023 and one from 2024)</li>
+                    <li>Leagues, the regions they cover and their bases are as follows:</li>
+                    <ul>
+                        <li><img src="img/19px-VCT_2023_Americas_League_allmode.png"> Americas Leauge</li>
+                        <ul>
+                            <li>Covers North and South America.</li>
+                            <li>Based at the <img src="img/36px-Us_hd.png" class="ImgFlag" alt="Usaflag"> Riot
+                                Games
+                                Arena, Santa Monica, Los Angeles, California, United States</li>
+                        </ul>
+                    </ul>
+                    <ul>
+                        <li><img src="img/17px-VCT_China_allmode.png"> China Leauge</li>
+                        <ul>
+                            <li>Covers Mainland China.</li>
+                            <li>Based at the <img src="img/36px-Cn_hd.png" class="ImgFlag" alt="Cnflag"> VCT CN
+                                Arena,
+                                Huangpu, Shanghai.</li>
+                        </ul>
+                    </ul>
+                    <ul>
+                        <li><img src="img/16px-VCT_2024_EMEA_League_darkmode.png"> EMEA League</li>
+                        <ul>
+                            <li>Covers Europe, the Middle East and North Africa.</li>
+                            <li>Based at the <img src="img/36px-De_hd.png" class="ImgFlag" alt="Gerflag"> Covers
+                                Europe,
+                                the Middle East and North Africa.</li>
+                        </ul>
+                    </ul>
+                    <ul>
+                        <li><img src="img/20px-VCT_2023_Pacific_League_allmode.png"> Pacific League</li>
+                        <ul>
+                            <li>Covers Asia and Oceania outside of Mainland China and West Asia.</li>
+                            <li>Based at the <img src="img/36px-Kr_hd.png" class="ImgFlag" alt="Krflag"> Sangam
+                                Colosseum, Mapo-gu, Seoul, South Korea.</li>
+                        </ul>
+                    </ul>
+
+                </ul>
+
+                <h2>VALORANT Champions Tour 2025</h2>
+                <p>is the fifth official tournament circuit by Riot Games. The circuit was announced on August
+                    20th,
+                    2024 with a YouTube video. More details on Championship Points and international tournament
+                    formats
+                    were shared on November 26th, 2024</p>
+
+                <h3>Championship Points</h3>
+
+                <div class="table-container">
+                    <h3 class="text-center">2024 Championship Points</h3>
+                    <table class="table table-dark table-bordered">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Applicable Tournament</th>
+                                <th class="bg-gold">1st</th>
+                                <th class="bg-silver">2nd</th>
+                                <th class="bg-bronze">3rd</th>
+                                <th>Group Stage Match Victory</th>
+                                <th>Group Victory</th>
+                                <th>Bye Round</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><img src="img/23px-VCT_icon_darkmode.png"> Kickoff</td>
+                                <td>3</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><img src="img/46px-VCT_Masters_icon_allmode.png" width="23px" height="23px">
+                                    Masters 1</td>
+                                <td>3</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><img src="img/23px-VCT_icon_darkmode.png"> Stage 1</td>
+                                <td>3</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><img src="img/46px-VCT_Masters_icon_allmode.png" width="23px" height="23px">
+                                    Masters 2</td>
+                                <td>3</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><img src="img/23px-VCT_icon_darkmode.png"> Stage 2</td>
+                                <td class="bg-gold"><img src="img/24px-VCT_Champions_icon_allmode.png"></td>
+                                <td class="bg-silver"><img src="img/24px-VCT_Champions_icon_allmode.png"></td>
+                                <td>-</td>
+                                <td>1</td>
+                                <td>-</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-container mt-4">
+                    <h3 class="text-center">2025 Championship Points</h3>
+                    <table class="table table-dark table-bordered">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Applicable Tournament</th>
+                                <th class="bg-gold">1st</th>
+                                <th class="bg-silver">2nd</th>
+                                <th class="bg-bronze">3rd</th>
+                                <th class="bg-blue">4th</th>
+                                <th class="bg-blue">5th - 6th</th>
+                                <th>Regular Season Match Victory</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><img src="img/23px-VCT_icon_darkmode.png"> Kickoff</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><img src="img/46px-VCT_Masters_icon_allmode.png" width="23px" height="23px">
+                                    Masters 1</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><img src="img/23px-VCT_icon_darkmode.png"> Stage 1</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><img src="img/46px-VCT_Masters_icon_allmode.png" width="23px" height="23px">
+                                    Masters 2</td>
+                                <td>7</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><img src="img/23px-VCT_icon_darkmode.png"> Stage 2</td>
+                                <td><img src="img/24px-VCT_Champions_icon_allmode.png"></td>
+                                <td><img src="img/24px-VCT_Champions_icon_allmode.png"></td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>-</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid bg-dark text-light py-2 text-center">
+        <div class="container">
+            <p style="font-size: 20px;">&copy; 670710203 ธนกฤต วรรณศรี</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

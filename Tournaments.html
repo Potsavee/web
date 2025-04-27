@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tournament Valorant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+        }
+
+        .navbar-change {
+            background-color: #5a0f0f;
+            height: 50px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .navbar-change .nav-link,
+        .navbar-change .navbar-brand {
+            color: white;
+        }
+
+        .navbar-change .nav-link:hover {
+            color: #ffcc00;
+            font-size: 16px;
+
+        }
+
+        .search-box {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+        }
+
+        .search-box::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .navbar-nav {
+            flex-grow: 1;
+            justify-content: left;
+            margin-left: 10px;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 1;
+        }
+
+        .navbar-brand {
+            margin-left: 10px;
+        }
+
+        .dropdown-menu {
+            background-color: #5a0f0f;
+        }
+
+        .dropdown-menu .dropdown-item {
+            color: white;
+        }
+
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #771212;
+            color: #ffcc00;
+        }
+
+        .dropdown-item {
+            color: white;
+            font-size: 14px;
+        }
+
+        .page-header {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+
+        .tier-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1em;
+        }
+
+        .tier-table th,
+        .tier-table td {
+            border: 1px solid #555;
+            padding: 0.5em;
+            text-align: left;
+        }
+
+        .tier-table th {
+            background-color: #444;
+            font-weight: bold;
+        }
+
+        .tier-table tr:nth-child(even) {
+            background-color: #333;
+        }
+
+        .footer-text {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-change">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/Valorant_logo_-_pink_color_version.svg.png" alt="Home" width="60" height="40">
+                </a>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="trendingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-fire"></i> Trending
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Pacific.html">VCT 2025:Pacific Stage 1</a></li>
+                            <li><a class="dropdown-item" href="Americas.html">VCT 2025: Americas Stage 1</a></li>
+                            <li><a class="dropdown-item" href="China.html">VCT 2025: China Stage 1</a></li>
+                            <li><a class="dropdown-item" href="EMEA.html">VCT 2025: EMEA Stage 1</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Ranking.html">
+                            <i class="fa-solid fa-trophy"></i> Ranking
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="contributeDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-puzzle-piece"></i> Contribute
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">670710203 ธนกฤต วรรณศรี</a></li>
+                            <li><a class="dropdown-item" href="#">670710339 สรินทร์ชัย มีศิลป์</a></li>
+                            <li><a class="dropdown-item" href="#">670710726 พศวีร์ สุทธิวานิช</a></li>
+                            <li><a class="dropdown-item" href="#">670710981 ภัทรพล ภวาภิรมย์</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="search-container">
+                    <form class="d-flex">
+                        <input class="form-control me-2 search-box" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                    <ul class="navbar-nav ms-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-user-plus"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-right-to-bracket"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </nav>
+
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="page-header">About S-Tier, A-Tier, B-Tier and C-Tier</h1>
+                    <p>S-Tier, A-Tier, B-Tier and C-Tier are the tiers for the most important tournaments on this wiki.
+                        They
+                        are categorized as follows:</p>
+
+                    <table class="table table-dark table-striped tier-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Typical prize pool</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>S-Tier</td>
+                                <td>$100k+</td>
+                                <td>Tournaments with only the world's elite teams. Finals of S-Tier tournaments are
+                                    international LAN-events. They require an extensive qualifier system to make sure
+                                    only
+                                    the top teams can take part.</td>
+                            </tr>
+                            <tr>
+                                <td>A-Tier</td>
+                                <td>$50k+</td>
+                                <td>Tournaments with top competition, however a less strict qualifying system than
+                                    S-Tier,
+                                    for example by open qualifiers. A-Tier tournaments can, but do not have to include a
+                                    LAN-step, but require substantial regional impact in a significant region. Examples
+                                    for
+                                    A-Tier tournaments are RAGE Japan Tournament or Pop Flash.</td>
+                            </tr>
+                            <tr>
+                                <td>B-Tier</td>
+                                <td>$5k-50k</td>
+                                <td>Tournaments with mostly top competition and/or unusually high prize pools.
+                                    Tournaments
+                                    with relatively small prize pools and less overall importance can be B-Tier if
+                                    competitors are expected to be majority top level in their region. B-Tier
+                                    tournaments
+                                    need to have at least some regional impact. Domestic tournaments can be B-Tier as
+                                    well,
+                                    however only if the country in question has multiple notable active players close to
+                                    the
+                                    top level of play. Examples are the Valorant Contenders Cup, Gamers Club Ultimate #2
+                                    or
+                                    Clan Masters 2020.</td>
+                            </tr>
+                            <tr>
+                                <td>C-Tier</td>
+                                <td>$10k or less</td>
+                                <td>Tournaments which focus on a region's or country's bubble scene and small prize
+                                    pools,
+                                    but that are not part of weekly or monthly events.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>While the prize pool is an important factor for categorizing tournaments, it does not equal a
+                        specific tier. Higher tier tournaments require a higher level of competition, which, if not met,
+                        can
+                        cause a tournament to be tiered lower. For example, a hypothetical $75k tournament with no
+                        affiliation to high level teams participating is not A-Tier, but B-Tier at most. All tiers are
+                        up to
+                        Admin discretion.</p>
+                </div>
+                <div class="col-md-12">
+                    <h1 class="page-header">About S-Tier, A-Tier, B-Tier and C-Tier <a href="#" class=""></a>
+                    </h1>
+                    <p>S-Tier, A-Tier, B-Tier and C-Tier are the tiers for the most important tournaments on this wiki.
+                        They
+                        are categorized as follows:</p>
+
+                    <table class="table table-dark table-striped tier-table">
+                        <thead>
+                            <tr>
+                                <th>Tier</th>
+                                <th>Tournament</th>
+                                <th>Date</th>
+                                <th>Prize Pool</th>
+                                <th>Location</th>
+                                <th>P#</th>
+                                <th>Winner</th>
+                                <th>Runner-up</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>S-Tier</td>
+                                <td>VALORANT Masters Bangkok 2025</td>
+                                <td>Feb 20 - Mar 2, 2025</td>
+                                <td>$500,000</td>
+                                <td>Bangkok</td>
+                                <td>8</td>
+                                <td>T1</td>
+                                <td>G2 Esports</td>
+                            </tr>
+                            <tr>
+                                <td>A-Tier</td>
+                                <td>VALORANT China Evolution Series Act 1</td>
+                                <td>Feb 8 - 16, 2025</td>
+                                <td></td>
+                                <td>Shanghai</td>
+                                <td>12</td>
+                                <td>NOVA Esports</td>
+                                <td>Wolves Esports</td>
+                            </tr>
+                            <tr>
+                                <td>S-Tier</td>
+                                <td>VCT 2025: Pacific Kickoff</td>
+                                <td>Jan 18 - Feb 9, 2025</td>
+                                <td></td>
+                                <td>Seoul</td>
+                                <td>12</td>
+                                <td>DRX</td>
+                                <td>T1</td>
+                            </tr>
+                            <tr>
+                                <td>S-Tier</td>
+                                <td>VCT 2025: EMEA Kickoff</td>
+                                <td>Jan 15 - Feb 9, 2025</td>
+                                <td></td>
+                                <td>Berlin</td>
+                                <td>12</td>
+                                <td>Team Vitality</td>
+                                <td>Team Liquid</td>
+                            </tr>
+                            <tr>
+                                <td>S-Tier</td>
+                                <td>VCT 2025: Americas Kickoff</td>
+                                <td>Jan 16 - Feb 8, 2025</td>
+                                <td></td>
+                                <td>Los Angeles</td>
+                                <td>12</td>
+                                <td>G2 Esports</td>
+                                <td>Sentinels</td>
+                            </tr>
+                            <tr>
+                                <td>S-Tier</td>
+                                <td>VCT 2025: China Kickoff</td>
+                                <td>Jan 11 - 25, 2025</td>
+                                <td></td>
+                                <td>Shanghai</td>
+                                <td>12</td>
+                                <td>EDward Gaming</td>
+                                <td>Trace Esports</td>
+                            </tr>
+                            <tr>
+                                <td>A-Tier</td>
+                                <td>Saudi eLeague Championship 2024</td>
+                                <td>Dec 20 - 22, 2024</td>
+                                <td>$106,487.54</td>
+                                <td>Riyadh</td>
+                                <td>4</td>
+                                <td>The Ultimates</td>
+                                <td>AlQadsiah Esports</td>
+                            </tr>
+                            <tr>
+                                <td>A-Tier</td>
+                                <td>SOOP VALORANT League 2024</td>
+                                <td>Dec 10 - 15, 2024</td>
+                                <td>$80,000</td>
+                                <td>Seoul</td>
+                                <td>8</td>
+                                <td>NRG</td>
+                                <td>Gen.G Esports</td>
+                            </tr>
+                            <tr>
+                                <td>A-Tier</td>
+                                <td>Superb Cup</td>
+                                <td>Dec 8 - 15, 2024</td>
+                                <td>$16,492.34</td>
+                                <td>China</td>
+                                <td>8</td>
+                                <td>XLG Esports</td>
+                                <td>Nova Esports</td>
+                            </tr>
+                            <tr>
+                                <td>A-Tier</td>
+                                <td>Shanghai Esports Masters 2024</td>
+                                <td>Dec 6 - 7, 2024</td>
+                                <td></td>
+                                <td>Shanghai</td>
+                                <td>4</td>
+                                <td>Wolves Esports</td>
+                                <td>XLG Esports</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2 class="page-header">B-Tier Tournaments <a href="#" class=""></a></h2>
+                    <table class="table table-dark table-striped tier-table">
+                        <thead>
+                            <tr>
+                                <th>Tier</th>
+                                <th>Tournament</th>
+                                <th>Date</th>
+                                <th>Prize Pool</th>
+                                <th>Location</th>
+                                <th>P#</th>
+                                <th>Winner</th>
+                                <th>Runner-up</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>B-Tier</td>
+                                <td>VALORANT Challengers 2025 Korea: Stage 1</td>
+                                <td>Feb 5 - Mar 27, 2025</td>
+                                <td>$30,636.63</td>
+                                <td>Seoul</td>
+                                <td>8</td>
+                                <td>FEARX</td>
+                                <td>Dplus</td>
+                            </tr>
+                            <tr>
+                                <td>B-Tier</td>
+                                <td>VALORANT Challengers South Asia 2025: Split 1</td>
+                                <td>Mar 4 - 21, 2025</td>
+                                <td>$30,577.13</td>
+                                <td>South Asia</td>
+                                <td>8</td>
+                                <td>Velocity Gaming</td>
+                                <td>Revenant XSpark</td>
+                            </tr>
+                            <tr>
+                                <td>B-Tier</td>
+                                <td>VALORANT Challengers 2025 North America: Stage 1</td>
+                                <td>Jan 27 - Mar 20, 2025</td>
+                                <td>$38,000</td>
+                                <td>North America</td>
+                                <td>16</td>
+                                <td>Shopify Rebellion Black</td>
+                                <td>M80</td>
+                            </tr>
+                            <tr>
+                                <td>B-Tier</td>
+                                <td>VCT 2025: Game Changers EMEA Stage 1</td>
+                                <td>Feb 15 - Mar 19, 2025</td>
+                                <td>$36,080.76</td>
+                                <td>Europe<br>Middle East<br>Africa</td>
+                                <td>10</td>
+                                <td>Karmine Corp GC</td>
+                                <td>GIANTX GC</td>
+                            </tr>
+                            <tr>
+                                <td>B-Tier</td>
+                                <td>Spike Drop #4: Momentum Series</td>
+                                <td>Mar 14 - 16, 2025</td>
+                                <td>$10,000</td>
+                                <td>Las Vegas</td>
+                                <td>27</td>
+                                <td>Burger Boyz</td>
+                                <td>Blue Otter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <footer class="container-fluid bg-dark text-light py-2 text-center">
+                <div class="container">
+                    <p style="font-size: 20px;">&copy; 670710203 ธนกฤต วรรณศรี</p>
+                </div>
+            </footer>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>

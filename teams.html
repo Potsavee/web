@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notable Active Teams</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+        }
+
+        .navbar-change {
+            background-color: #5a0f0f;
+            height: 50px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .navbar-change .nav-link,
+        .navbar-change .navbar-brand {
+            color: white;
+        }
+
+        .navbar-change .nav-link:hover {
+            color: #ffcc00;
+            font-size: 16px;
+
+        }
+
+        .search-box {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+        }
+
+        .search-box::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .navbar-nav {
+            flex-grow: 1;
+            justify-content: left;
+            margin-left: 10px;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 1;
+        }
+
+        .navbar-brand {
+            margin-left: 10px;
+        }
+
+        .dropdown-menu {
+            background-color: #5a0f0f;
+        }
+
+        .dropdown-menu .dropdown-item {
+            color: white;
+        }
+
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #771212;
+            color: #ffcc00;
+        }
+
+        .dropdown-item {
+            color: white;
+            font-size: 14px;
+        }
+
+        .team-card {
+            background-color: #1a1a1a;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            color: #ddd;
+        }
+
+        .team-pic {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 2px solid #333;
+        }
+
+        .team-member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .team-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .btn-custom {
+            background-color: #c00;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn-custom:hover {
+            background-color: #a00;
+        }
+
+        .footer-text {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-change">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/Valorant_logo_-_pink_color_version.svg.png" alt="Home" width="60" height="40">
+            </a>
+
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="trendingDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-fire"></i> Trending
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Pacific.html">VCT 2025:Pacific Stage 1</a></li>
+                        <li><a class="dropdown-item" href="Americas.html">VCT 2025: Americas Stage 1</a></li>
+                        <li><a class="dropdown-item" href="China.html">VCT 2025: China Stage 1</a></li>
+                        <li><a class="dropdown-item" href="EMEA.html">VCT 2025: EMEA Stage 1</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Ranking.html">
+                        <i class="fa-solid fa-trophy"></i> Ranking
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="contributeDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-puzzle-piece"></i> Contribute
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">670710203 ธนกฤต วรรณศรี</a></li>
+                        <li><a class="dropdown-item" href="#">670710339 สรินทร์ชัย มีศิลป์</a></li>
+                        <li><a class="dropdown-item" href="#">670710726 พศวีร์ สุทธิวานิช</a></li>
+                        <li><a class="dropdown-item" href="#">670710981 ภัทรพล ภวาภิรมย์</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="search-container">
+                <form class="d-flex">
+                    <input class="form-control me-2 search-box" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <ul class="navbar-nav ms-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-user-plus"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-right-to-bracket"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Notable Active Teams </h1>
+
+        <div class="team-card">
+            <div class="team-info">
+                <h2>#1 EDward Gaming</h2>
+                <p>Total Earnings: $1,332,287</p>
+            </div>
+            <div class="d-flex justify-content-around">
+                <div class="team-member">
+                    <img src="img/186px-EDG_CHICHOO_at_Champions_2024.jpg" alt="CHICHOO" class="team-pic">
+                    <p>CHICHOO</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/186px-Blank_Player_Image_nopadding.png" alt="Jieni7" class="team-pic">
+                    <p>Jieni7</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/186px-EDG_S1Mon_at_VALORANT_Champions_2024.jpg" alt="S1Mon" class="team-pic">
+                    <p>S1Mon</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/186px-EDG_Smoggy_winning_Champions_2024.jpg" alt="Smoggy" class="team-pic">
+                    <p>Smoggy</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/186px-Blank_Player_Image_nopadding.png" alt="WoodAy1" class="team-pic">
+                    <p>WoodAy1</p>
+                </div>
+            </div>
+            <div class="row">
+
+            </div>
+            <div class="mt-3">
+                <a href="https://x.com/edg_edward" class="btn-custom">Team Page</a>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-info">
+                <h2>#2 Fnatic</h2>
+                <p>Total Earnings: $1,318,026</p>
+            </div>
+            <div class="d-flex justify-content-around">
+                <div class="team-member">
+                    <img src="img/186px-FNC_Alfajer_at_VCT_EMEA_Kickoff_2025.jpg" alt="Alfajer" class="team-pic">
+                    <p>Alfajer</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/186px-FNC_Boaster_at_VCT_EMEA_Kickoff_2025.jpg" alt="Boaster" class="team-pic">
+                    <p>Boaster</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/186px-FNC_Chronical_at_VCT_Masters_Tokyo.jpg" alt="Chronicle" class="team-pic">
+                    <p>Chronicle</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/186px-FNC_crashies_at_VCT_EMEA_Kickoff_2025.jpg" alt="crashies" class="team-pic">
+                    <p>crashies</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/186px-Apeks_kaajak_at_VCT_Ascension_EMEA_2024.jpg" alt="kaajak" class="team-pic">
+                    <p>kaajak</p>
+                </div>
+            </div>
+            <div class="row">
+
+            </div>
+            <div class="mt-3">
+                <a href="https://x.com/fnatic" class="btn-custom">Team Page</a>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-info">
+                <h2>#3 Paper Rex</h2>
+                <p>Total Earnings: $1,239,351</p>
+            </div>
+            <div class="d-flex justify-content-around">
+                <div class="team-member">
+                    <img src="img/186px-Paper_Rex_Jinggg_at_VCT_Pacific_League_2023.jpg" alt="Jinggg" class="team-pic">
+                    <p>Jinggg</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/140px-Paper_Rex_PatMen.png" alt="PatMen" class="team-pic">
+                    <p>PatMen</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/186px-Paper_Rex_d4v41_at_VCT_Pacific_2024_Kickoff.jpg" alt="d4v41" class="team-pic">
+                    <p>d4v41</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/186px-Paper_Rex_f0rsakeNat_VCT_Pacific_2024_Kickoff.jpg" alt="f0rsakeN"
+                        class="team-pic">
+                    <p>f0rsakeN</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/186px-PRX_mindfreak_at_VCT_Pacific_2024_Kickoff.jpg" alt="mindfreak" class="team-pic">
+                    <p>mindfreak</p>
+                </div>
+            </div>
+            <div class="row">
+
+            </div>
+            <div class="mt-3">
+                <a href="https://x.com/pprxteam" class="btn-custom">Team Page</a>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-info">
+                <h2>#4 Sentinels</h2>
+                <p>Total Earnings: $1,025,500</p>
+            </div>
+            <div class="d-flex justify-content-around">
+                <div class="team-member">
+                    <img src="img/186px-Karmine_N4RRATE_at_VCT_2024_EMEA_Kickoff.jpg" alt="N4RRATE" class="team-pic">
+                    <p>N4RRATE</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/186px-Sentinels_Zellsis_at_Masters_Madrid.jpg" alt="Zellsis" class="team-pic">
+                    <p>Zellsis</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/186px-SEN_Bang_at_Masters_Bangkok.jpg" alt="bang" class="team-pic">
+                    <p>bang</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/186px-Sentinels_JohnQT_at_Masters_Madrid.jpg" alt="johnqt" class="team-pic">
+                    <p>johnqt</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/186px-Blank_Player_Image_nopadding.png" alt="reduxx" class="team-pic">
+                    <p>reduxx</p>
+                </div>
+            </div>
+            <div class="row">
+
+            </div>
+            <div class="mt-3">
+                <a href="https://x.com/Sentinels" class="btn-custom">Team Page</a>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-info">
+                <h2>#5 G2 Esport</h2>
+                <p>Total Earnings: $693,031</p>
+            </div>
+            <div class="d-flex justify-content-around">
+                <div class="team-member">
+                    <img src="img/186px-G2_JonahP_at_VCT_Masters_Shanghai_2024.jpg" alt="JonahP" class="team-pic">
+                    <p>JonahP</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/186px-Jawgemo_at_the_VCT_2023_LOCKIN_São_Paulo.jpg" alt="jawgemo" class="team-pic">
+                    <p>jawgemo</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/186px-G2_leaf_at_VCT_Masters_Shanghai_2024.jpg" alt="leaf" class="team-pic">
+                    <p>leaf</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/186px-G2_trent_at_VALORANT_Champions_2024.jpg" alt="trent" class="team-pic">
+                    <p>trent</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/186px-G2_valyn_at_VALORANT_Champions_2024.jpg" alt="valyn" class="team-pic">
+                    <p>valyn</p>
+                </div>
+            </div>
+            <div class="row">
+
+            </div>
+            <div class="mt-3">
+                <a href="https://x.com/G2esports" class="btn-custom">Team Page</a>
+            </div>
+        </div>
+
+    </div>
+    <footer class="container-fluid bg-dark text-light py-2 text-center">
+        <div class="container">
+            <p style="font-size: 20px;">&copy; 670710203 ธนกฤต วรรณศรี</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
